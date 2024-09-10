@@ -1,0 +1,7 @@
+.env
+.vs/
+.vscode/
+node_modules/
+/npm/dist
+/npm/path.txt
+/npm/checksums.json

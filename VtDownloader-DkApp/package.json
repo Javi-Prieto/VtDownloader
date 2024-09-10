@@ -1,0 +1,15 @@
+{
+  "name": "vtdownloader-dkapp",
+  "version": "1.0.0",
+  "description": "Downloader",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Javier Prieto",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^32.0.2"
+  }
+}
