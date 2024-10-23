@@ -12,3 +12,6 @@ class DownloadFileResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     status_description: str
+    status: str
+    download_id: int
+    download_name: str
