@@ -35,6 +35,7 @@ class DownloadsService:
                 message = "URL: "+download_url+"\nPath: " + download_path,
                 timeout = 5,
                 app_icon = str(Path.cwd().absolute()/'assets/check_icon.ico'),
+                app_name = "VtDownloader",
                 toast=False
             )
         else:
@@ -44,5 +45,6 @@ class DownloadsService:
                 message="URL: " + download_url,
                 timeout=5,
                 app_icon=str(Path.cwd().absolute() / 'assets/cross_icon.ico'),
+                app_name="VtDownloader",
                 toast=False
             )
