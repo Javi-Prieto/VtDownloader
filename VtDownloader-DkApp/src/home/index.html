@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VtDownloader</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="./lib/jquery.3.7.1.js"></script>
+</head>
+<body>
+    <header id="tab-bar">
+        <div id="window-title">
+            <img src="../../assets/VtDownloaderLogo.png" alt="my app logo" id="logo" style="width: 36px;height: 36px;">
+            <span>V</span>
+            <h3>t</h3>
+            <span>D</span>
+            <h3>onwloader</h3>
+        </div>
+        <div id="window-controls">
+            <div class="cntrl-b window-hover" id="min-b">
+                <img src="../../assets/minimize.png" alt="" class="icon" id="min-img" draggable="false" style="width: 36px;height: 36px;">
+            </div>
+            <div class="cntrl-b window-hover" id="resize-b">
+                <img src="../../assets/resize.png" alt="" class="icon" id="resize-img" draggable="false" style="width: 36px;height: 36px;">
+            </div>
+            <div class="cntrl-b window-hover" id="close-b">
+                <img src="../../assets/Close.png" alt="" class="icon" id="close-img" draggable="false" style="width: 36px;height: 36px;">
+            </div>
+        </div>
+        <hr>
+    </header>
+
+    <main>
+        <div class="donwload-scan-section">
+            <form id="download-input">
+                <input type="text" name="donwload_url" id="donwload_url" placeholder="URL" autocomplete="off">
+                <button type="button" id="donwload_button">
+                    <img src="../../assets/download-icon.png" alt="Donwload Icon">
+                </button>
+            </form>
+            <form id="scan-input">
+                <label for="file_to_scan" id="file-upload-label">
+                    <div id="file-upload-design">
+                        <p>Drag and Drop or Click to browse</p>
+                        <img src="../../assets/upload-icon.png" alt="Upload Icon">
+                    </div>
+                    <input id="file_to_scan" type="file" />
+                </label>
+            </form>
+        </div>
+        <div id="main-section">
+            <h3>Latest Downloads</h3>
+            <hr>
+            <div id="downloaded-files">
+                
+            </div>
+        </div>
+    </main>
+    
+    
+    <script defer src="index.js"></script>
+</body>
+</html>
