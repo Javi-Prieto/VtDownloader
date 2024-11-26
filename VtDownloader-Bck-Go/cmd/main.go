@@ -1,16 +1,17 @@
 package main
 
 import (
-	"encoding/json"
 	"net/http"
 
+	downloadsHandler "VtDownloader.Back.Go/pkg/MOD_D_Downloads"
+	modssseService "VtDownloader.Back.Go/pkg/MOD_S_SSE"
 	"github.com/gorilla/mux"
 )
 
 func main() {
+	println("--- INITIATED THE VTDOWNLOADER BACK ---")
 	router := mux.NewRouter()
-	router.HandleFunc("/hello_world", func(w http.ResponseWriter, r *http.Request) {
-		json.NewEncoder(w).Encode("Hello World")
-	})
+	downloadsHandler.Init(router)
+	router.HandleFunc("/vt-sse/download", modssseService.SseDownload).Methods(http.MethodGet)
 	http.ListenAndServe(":8000", router)
 }
