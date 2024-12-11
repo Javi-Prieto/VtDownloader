@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="VtDwownloader-DkApp/VtDownloaderLogo.png" width="30%"/>
+  <img src="VtDwownloader-DkApp/assets/VtDownloaderLogo.png" width="30%"/>
   <br>
 </p>
 
