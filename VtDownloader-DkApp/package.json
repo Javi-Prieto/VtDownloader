@@ -4,12 +4,41 @@
   "description": "Downloader",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-builder",
+    "make": "electron-forge make"
   },
   "author": "Javier Prieto",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^32.0.2"
+    "@electron-forge/maker-deb": "^7.6.0",
+    "@electron-forge/maker-rpm": "^7.6.0",
+    "@electron-forge/maker-squirrel": "^7.6.0",
+    "@electron-forge/maker-zip": "^7.6.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.6.0",
+    "@electron-forge/plugin-fuses": "^7.6.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^32.0.2",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "eventsource": "^2.0.2",
+    "jquery": "^3.7.1"
+  },
+  "build": {
+    "appId": "com.vtdownloader.desktop",
+    "productName": "VtDownloader",
+    "files": [
+      "**/*",
+      "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/.bin",
+      "!**/*.map"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/VtDownloaderLogo.png"
+    }
   }
 }
