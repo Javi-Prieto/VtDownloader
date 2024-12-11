@@ -7,6 +7,7 @@ import (
 	"os"
 	"os/exec"
 	"strings"
+	"syscall"
 
 	"VtDownloader.Back.Go/pkg/MOD_D_Downloads/messages"
 	"VtDownloader.Back.Go/pkg/MOD_D_Downloads/models"
@@ -94,6 +95,7 @@ Params:
 */
 func (m *DownloadService) downloadFile(command *exec.Cmd, downloadId int, downloadUrl string) {
 	var message string
+	command.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 	err := command.Run()
 
 	if err != nil {
